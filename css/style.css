@@ -45,6 +45,7 @@ header .container .header_top ul li {
 header .container .header_top ul li a {
   margin: 0 10px;
   transition: all 0.5s;
+  color: white;
 }
 header .container .header_top ul li a:hover {
   text-decoration: underline;
@@ -68,6 +69,9 @@ header .container .header_bot ul {
 header .container .header_bot ul li {
   position: relative;
   margin-left: 20px;
+}
+header .container .header_bot ul li a {
+  color: white;
 }
 header .container .header_bot ul li::before {
   content: "";
@@ -96,6 +100,9 @@ header .container .header_bot .shopping_part span {
 }
 header .container .header_bot .shopping_part span:hover a {
   color: #f15e2c;
+}
+header .container .header_bot .shopping_part span a {
+  color: white;
 }
 
 .banner {
@@ -145,11 +152,18 @@ footer .container .foot_content .foot_1 ul li {
   font-weight: bold;
   line-height: 2rem;
 }
+footer .container .foot_content .foot_1 ul li a {
+  color: white;
+}
 footer .container .foot_content .foot_2 h3,
 footer .container .foot_content .foot_3 h3 {
   font-size: 10px;
   font-weight: bold;
   line-height: 2rem;
+}
+footer .container .foot_content .foot_2 ul,
+footer .container .foot_content .foot_3 ul {
+  padding-left: 0;
 }
 footer .container .foot_content .foot_2 ul li,
 footer .container .foot_content .foot_3 ul li {
@@ -160,6 +174,7 @@ footer .container .foot_content .foot_3 ul li {
 footer .container .foot_content .foot_2 ul li a,
 footer .container .foot_content .foot_3 ul li a {
   transition: all 0.3s;
+  color: black;
 }
 footer .container .foot_content .foot_2 ul li a:hover,
 footer .container .foot_content .foot_3 ul li a:hover {
@@ -171,7 +186,39 @@ footer .container .foot_social ul {
 }
 footer .container .foot_social ul li a {
   transition: all 0.3s;
+  color: black;
 }
 footer .container .foot_social ul li a:hover {
   color: #f15e2c;
+}
+
+.form-register {
+  margin-top: 200px;
+}
+.form-register .form .text-form h1 {
+  color: #173d58;
+}
+.form-register .form .form-input form .input-detail .error-notify {
+  margin-left: 2px;
+  font-size: 14px;
+  color: red;
+}
+.form-register .form .form-input .btn-submit {
+  background-color: #173d58;
+}
+
+.products .header-products .search_input {
+  width: 200px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.products .header-products .search_input:focus {
+  border: 2px solid #173d58;
+}
+.products .detailed_products .item .shoes_name {
+  padding-bottom: 0;
+}
+.products .detailed_products .item .shoes_description {
+  padding-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+.form .form-input .form-control:focus,
+.form .form-input .form-select:focus {
+  box-shadow: none;
+  border: 1px solid black;
+}
+.form .form-input .form-select {
+  padding: 3px 10px;
+}
+.form {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.size-button {
+  border: 1px solid rgb(27, 13, 79);
+}
+.detail-product .product-info-list {
+  padding-left: 12px;
+  list-style: circle;
+}

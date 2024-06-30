@@ -24,6 +24,7 @@ header {
           a {
             margin: 0 10px;
             transition: all 0.5s;
+            color: white;
             //   &::before {
             //     content: "";
             //     position: absolute;
@@ -67,6 +68,9 @@ header {
         li {
           position: relative;
           margin-left: 20px;
+          a {
+            color: white;
+          }
           &::before {
             content: "";
             position: absolute;
@@ -103,6 +107,9 @@ header {
             a {
               color: #f15e2c;
             }
+          }
+          a {
+            color: white;
           }
         }
       }
@@ -160,6 +167,9 @@ footer {
       .foot_1 {
         ul {
           li {
+            a {
+              color: white;
+            }
             font-size: 10px;
             font-weight: bold;
             line-height: 2rem;
@@ -174,6 +184,7 @@ footer {
           line-height: 2rem;
         }
         ul {
+          padding-left: 0;
           li {
             color: black;
             font-size: 10px;
@@ -181,6 +192,7 @@ footer {
 
             a {
               transition: all 0.3s;
+              color: black;
               &:hover {
                 color: #f15e2c;
               }
@@ -196,11 +208,61 @@ footer {
         li {
           a {
             transition: all 0.3s;
+            color: black;
             &:hover {
               color: #f15e2c;
             }
           }
         }
+      }
+    }
+  }
+}
+
+.form-register {
+  margin-top: 200px;
+  .form {
+    .text-form {
+      h1 {
+        color: #173d58;
+      }
+    }
+    .form-input {
+      form {
+        .input-detail {
+          .error-notify {
+            margin-left: 2px;
+            font-size: 14px;
+            color: red;
+          }
+        }
+      }
+      .btn-submit {
+        background-color: #173d58;
+      }
+    }
+  }
+}
+
+.products {
+  .header-products {
+    .search_input {
+      width: 200px;
+      padding: 10px 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+      &:focus {
+        border: 2px solid #173d58;
+      }
+    }
+  }
+  .detailed_products {
+    .item {
+      .shoes_name {
+        padding-bottom: 0;
+      }
+      .shoes_description {
+        padding-bottom: 0;
       }
     }
   }
