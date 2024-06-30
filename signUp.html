@@ -15,31 +15,28 @@
       title="Web Awesome"
       href="/css/app-wa-d53d10572a0e0d37cb8d614a3f177a0c.css?vsn=d"
     />
-
+    <title>Shoes Shop Captone</title>
+    <link
+      rel="shortcut icon"
+      href="./images/Logo_Ananas.png"
+      type="image/x-icon"
+    />
+    <!-- FontAwesome 6.2.0 CSS -->
     <link
       rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- gg font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
-    />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -51,11 +48,45 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <div class="container mx-auto">
+    <header>
+      <div class="container">
+        <div class="header_top">
+          <ul>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div>
+        <div class="header_bot">
+          <img src="./images/Logo_Ananas.png" alt="" />
+
+          <ul>
+            <li><a href="#">New & Featured</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">Kids</a></li>
+            <li><a href="">Sales</a></li>
+          </ul>
+
+          <div class="shopping_part">
+            <span>
+              <a href=""><i class="fa-regular fa-heart"></i></a>
+            </span>
+            <span>
+              <a href=""><i class="fa fa-shopping-cart"></i></a
+            ></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container mx-auto my-5 form-register">
       <div class="form mt-5 py-5">
         <div class="text-form flex-column text-center">
           <img
@@ -72,7 +103,7 @@
         </div>
         <div class="form-input mt-5">
           <form class="grid grid-cols-3 w-75 mx-auto gap-x-8" id="formSubmit">
-            <div class="mb-4">
+            <div class="mb-4 input-detail">
               <label for="" class="form-label font-bold"
                 >Name <span class="text-red-500">*</span>
               </label>
@@ -84,8 +115,10 @@
                 aria-describedby="helpId"
                 placeholder="Enter your full name: "
               />
+              <span class="error-notify"></span>
+              <span class="error-notify"></span>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 input-detail">
               <label for="" class="form-label font-bold"
                 >Email <span class="text-red-500">*</span>
               </label>
@@ -97,8 +130,9 @@
                 aria-describedby="helpId"
                 placeholder="Enter your email: "
               />
+              <span class="error-notify"></span>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 input-detail">
               <label for="" class="form-label font-bold"
                 >Phone <span class="text-red-500">*</span>
               </label>
@@ -110,8 +144,9 @@
                 aria-describedby="helpId"
                 placeholder="Enter your phone number: "
               />
+              <span class="error-notify"></span>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-detail">
               <label for="" class="form-label font-bold"
                 >Password <span class="text-red-500">*</span>
               </label>
@@ -123,21 +158,23 @@
                 aria-describedby="helpId"
                 placeholder="Enter your password: "
               />
+              <span class="error-notify"></span>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-detail">
               <label for="" class="form-label font-bold"
                 >Confirm password <span class="text-red-500">*</span>
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
-                name=""
+                name="confpassword"
                 id="confpassword"
                 aria-describedby="helpId"
                 placeholder="Confirm password: "
               />
+              <span class="error-notify"></span>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 input-detail">
               <label for="" class="form-label font-bold"
                 >Gender <span class="text-red-500">*</span></label
               >
@@ -150,12 +187,14 @@
                 <option value="true" class="text-sm">Male</option>
                 <option value="false" class="text-sm">Female</option>
               </select>
+              <span class="error-notify mt-2"></span>
             </div>
             <div></div>
             <div class="mx-auto mt-4">
               <button
-                class="bg-black py-2 px-lg-5 text-white rounded-1 hover:opacity-80"
-                type="submit"
+                class="py-2 px-lg-5 text-white rounded-1 hover:opacity-80 btn-submit"
+                type="button"
+                onclick="{handleSubmit()}"
               >
                 Complete
               </button>
@@ -163,7 +202,56 @@
           </form>
         </div>
       </div>
-    </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="foot_content">
+          <div class="foot_1">
+            <ul>
+              <li><a href="#">FIND A STORE</a></li>
+              <li><a href="#">BECOME A MEMBER</a></li>
+              <li><a href="#">STUDENT DISCOUNTS</a></li>
+              <li><a href="#">FEEDBACK</a></li>
+            </ul>
+          </div>
+          <div class="foot_2">
+            <h3>GET HELP</h3>
+            <ul>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Delivery</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Contact Us </a></li>
+            </ul>
+          </div>
+          <div class="foot_3">
+            <h3>ABOUT NIKE</h3>
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Investors</a></li>
+              <li><a href="#">Sustainability</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot_social">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -176,5 +264,15 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+      integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./user/user.js"></script>
+    <script src="./validate/validate.js"></script>
+    <script src="./controller/users.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
