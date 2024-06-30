@@ -1,18 +1,21 @@
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: 100px;
+  background-color: $layoutcolor;
+  z-index: 9999;
+  // margin-bottom: 100px;
   .container {
     .header_top {
       display: flex;
-      //   background-color: hsl(0, 0%, 25%);
-      background-color: transparent;
+      background-color: hsl(0, 0%, 25%);
+      // background-color: transparent;
       justify-content: flex-end;
       padding: 5px 0;
       font-size: 12px;
       color: white;
+      border-radius: 10px;
       ul {
         display: flex;
         li {
@@ -47,9 +50,10 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      //   background-color: #173d58;
-      background-color: transparent;
-      color: white;
+      background-color: $bg-color;
+      // background-color: transparent;
+      border-radius: 10px;
+      color: $white;
       padding: 8px 10px;
       img {
         height: 40px;
@@ -111,21 +115,39 @@ header {
     rgba(23, 60, 88, 0.9360994397759104) 40%,
     rgba(241, 93, 44, 0.797) 60%
   );
-  height: 100vh;
-  padding-top: 150px;
+
   .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .banner_image {
-      width: 300px;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .vegnette {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.7)
+      );
     }
-    .banner_content {
+    .banner_image {
+      position: absolute;
+      width: 400px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: 0.45s cubic-bezier(0.26, 0.51, 0.42, 1);
     }
   }
 }
 footer {
-  padding-top: 100px;
+  padding-top: 20px;
   background-color: #173d58;
   .container {
     color: white;
