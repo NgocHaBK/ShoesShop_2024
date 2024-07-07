@@ -9,7 +9,6 @@ function GetProductAPI() {
       console.log("error from get all data: ", err);
     });
 }
-
 GetProductAPI();
 let productsArr = [];
 
@@ -35,11 +34,11 @@ const renderProducts = (renderedProducts = productsArr) => {
       const { image, price, name, description } = item;
       const new_description = description.slice(0, 50);
       contents += `<div class="flex-column mt-4 item">
-            <a href="./detail.html?productid=${item.id}"><img src="${image}" alt="hinh" class="w-100"/></a>
-            <a href="./detail.html?productid=${item.id}"><p>${name}</p></a>
-            <p class="shoes_name pb-0">Men's shoes</p>
+            <a href="./detail.html?productid=${item.id}"><img src="${image}" alt="hinh" style="background-color: #f5f5f5;object-fit:contain" class="w-100"/></a>
+            <a href="./detail.html?productid=${item.id}" style="color:#f15e2c"><p>${name}</p></a>
+            <p class="shoes_name pb-0 mb-2" style="color:#173d58">Men's shoes</p>
             <p class="shoes_description">${new_description}</p>
-            <p>$ ${price}</p>
+            <p class="pt-0">$ ${price}</p>
           </div>`;
     }
     console.log("Generated HTML content: ", contents);
@@ -68,9 +67,22 @@ function handleSubmit(e) {
     postUser(user)
       .then((res) => {
         console.log("post thành công: ", res.data);
+        setTimeout(redirectPage, 1000);
       })
       .catch((err) => {
         console.log("lỗi post user: ", err);
       });
   }
 }
+function searchItem(e) {
+  let keyword = e.target.value.toLowerCase().trim();
+  console.log("keyword: ", keyword);
+  keyword = removeVietnameseTones(keyword);
+  console.log(keyword);
+  let arrProductFilter = productsArr.filter((item, idx) => {
+    let tempProduct = removeVietnameseTones(item.name.toLowerCase().trim());
+    return tempProduct.includes(keyword);
+  });
+  renderProducts(arrProductFilter);
+}
+document.getElementById("search").oninput = searchItem;

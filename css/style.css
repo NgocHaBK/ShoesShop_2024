@@ -34,6 +34,11 @@ header .container .header_top {
   font-size: 12px;
   color: white;
 }
+@media screen and (max-width: 767.98px) {
+  header .container .header_top {
+    display: none;
+  }
+}
 header .container .header_top ul {
   display: flex;
 }
@@ -54,23 +59,34 @@ header .container .header_bot {
   align-items: center;
   background-color: transparent;
   color: white;
-  padding: 8px 10px;
+  padding-bottom: 10px;
 }
 header .container .header_bot img {
-  height: 40px;
+  height: 54px;
 }
-header .container .header_bot ul {
+@media screen and (max-width: 767.98px) {
+  header .container .header_bot img {
+    padding: 5px 0;
+  }
+}
+header .container .header_bot .nav_container {
   font-size: 18px;
+  margin: auto 0;
   display: flex;
 }
-header .container .header_bot ul li {
+@media screen and (max-width: 767.98px) {
+  header .container .header_bot .nav_container {
+    display: none;
+  }
+}
+header .container .header_bot .nav_container li {
   position: relative;
   margin-left: 20px;
 }
-header .container .header_bot ul li a {
+header .container .header_bot .nav_container li a {
   color: white;
 }
-header .container .header_bot ul li::before {
+header .container .header_bot .nav_container li::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -80,26 +96,149 @@ header .container .header_bot ul li::before {
   background-color: #f15e2c;
   transition: all 0.5s;
 }
-header .container .header_bot ul li:hover a {
+header .container .header_bot .nav_container li:hover a {
   color: #f15e2c;
 }
-header .container .header_bot ul li:hover::before {
+header .container .header_bot .nav_container li:hover::before {
   width: 100%;
 }
-header .container .header_bot ul li.active a {
+header .container .header_bot .nav_container li.active a {
   color: #f15e2c;
 }
-header .container .header_bot ul li.active::before {
+header .container .header_bot .nav_container li.active::before {
   width: 100%;
 }
-header .container .header_bot .shopping_part span {
-  margin-left: 10px;
+header .container .header_bot .shopping_part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: 18px;
 }
-header .container .header_bot .shopping_part span:hover a {
-  color: #f15e2c;
+header .container .header_bot .shopping_part .fav_wrapper {
+  position: relative;
 }
-header .container .header_bot .shopping_part span a {
+header .container .header_bot .shopping_part .fav_wrapper a {
   color: white;
+  position: relative;
+}
+header .container .header_bot .shopping_part .fav_wrapper a:hover {
+  color: #f15e2c;
+}
+header .container .header_bot .shopping_part .fav_wrapper a .fav_quantity {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  top: 0;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 12px;
+}
+header .container .header_bot .shopping_part .fav_wrapper .listFavItem {
+  position: absolute;
+  display: none;
+  top: 28px;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.8s;
+}
+header .container .header_bot .shopping_part .fav_wrapper .scrolling-table {
+  max-height: 400px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+header .container .header_bot .shopping_part .fav_wrapper::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 2px;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 20px solid #212529;
+  transition: all 0.8s;
+}
+header .container .header_bot .shopping_part .fav_wrapper:hover .listFavItem, header .container .header_bot .shopping_part .fav_wrapper:hover::after {
+  display: block;
+}
+header .container .header_bot .shopping_part .cart_wrapper {
+  position: relative;
+}
+header .container .header_bot .shopping_part .cart_wrapper:hover a {
+  color: #f15e2c;
+}
+header .container .header_bot .shopping_part .cart_wrapper a {
+  color: white;
+  position: relative;
+}
+header .container .header_bot .shopping_part .cart_wrapper a .cart_productQuantity {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  top: 0;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 12px;
+}
+header .container .header_bot .shopping_part .cart_wrapper .listCartItem {
+  position: absolute;
+  display: none;
+  top: 28px;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.8s;
+}
+header .container .header_bot .shopping_part .cart_wrapper::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 2px;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 20px solid #212529;
+  transition: all 0.8s;
+}
+header .container .header_bot .shopping_part .cart_wrapper:hover .listCartItem, header .container .header_bot .shopping_part .cart_wrapper:hover::after {
+  display: block;
+}
+@media screen and (min-width: 767.98px) {
+  header .container .header_bot .shopping_part .menu__button {
+    display: none;
+  }
+}
+header .container .header_bot .offcanvas .offcanvas_nav_container {
+  color: #173d58;
+  font-size: 18px;
+}
+header .container .header_bot .offcanvas .offcanvas_nav_container li {
+  padding: 10px 0;
+}
+header .container .header_bot .offcanvas .offcanvas_nav_container li a {
+  color: #173d58;
+}
+header .container .header_bot .offcanvas .offcanvas-button-box .btn-signup {
+  background-color: #f15e2c;
+}
+header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
+  background-color: #173d58;
 }
 
 .banner {
@@ -203,4 +342,18 @@ footer .container .foot_social ul li a:hover {
 }
 .products .detailed_products .item .shoes_description {
   padding-bottom: 0;
+}
+
+.detail-product .right ._button_group button:hover {
+  background-color: #173d58;
+  color: white;
+}
+.detail-product .right #btn-addfav {
+  background-color: #f15e2c;
+}
+.detail-product .right #btn-addfav:hover {
+  opacity: 80%;
+}
+.detail-product .right #btn-add {
+  background-color: #173d58;
 }/*# sourceMappingURL=style.css.map */
