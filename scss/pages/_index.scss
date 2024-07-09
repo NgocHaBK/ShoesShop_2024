@@ -220,17 +220,19 @@ header {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-
+    @media screen and(max-width:991.98px) {
+      padding: 0 40px;
+    }
     .banner_carousel {
       .banner_item {
-        width: auto;
-        height: auto;
-
-        justify-content: space-between;
-        align-items: center;
-        gap: 5em;
-
+        gap: 7em;
+        @media screen and (max-width: 1199.98px) {
+          gap: 3em;
+        }
+        @media screen and (max-width: 767.98px) {
+        }
         .banner_title {
+          width: 60%;
           color: white;
           .small_title {
             font-family: "Merriweather", serif;
@@ -240,17 +242,26 @@ header {
             font-weight: 500;
             animation-fill-mode: both;
             animation-delay: 0.5s;
+            @media screen and (max-width: 767.98px) {
+              font-size: 2em;
+            }
           }
-          h1 {
+          .main_title {
             font-family: "Josefin Sans", sans-serif;
             font-size: 7em;
             font-weight: 700;
             margin: 20px 0;
             filter: drop-shadow(20px 14px 0px #062943e2);
+            @media screen and (max-width: 767.98px) {
+              font-size: 5em;
+            }
           }
-          p {
+          .decrip_title {
             font-size: 15px;
             line-height: 2rem;
+            @media screen and (max-width: 767.98px) {
+              display: none;
+            }
           }
           // :root {
           //   --animate-duration: 800ms;
@@ -267,9 +278,15 @@ header {
               color: black;
               font-weight: bold;
             }
+            @media screen and (max-width: 767.98px) {
+              font-size: 15px;
+            }
           }
         }
         .banner_image {
+          @media screen and (max-width: 991.98px) {
+            width: 60%;
+          }
         }
       }
     }

@@ -15,7 +15,6 @@ ul {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
   padding: 0 70px;
 }
 
@@ -213,21 +212,6 @@ header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
   background-color: #173d58;
 }
 
-.form-register {
-  margin-top: 200px;
-}
-.form-register .form .text-form h1 {
-  color: #173d58;
-}
-.form-register .form .form-input form .input-detail .error-notify {
-  margin-left: 2px;
-  font-size: 14px;
-  color: red;
-}
-.form-register .form .form-input .btn-submit {
-  background-color: #173d58;
-}
-
 .banner {
   background: linear-gradient(
     180deg,
@@ -240,6 +224,7 @@ header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
   width: 100%;
   overflow: hidden;
 }
+
 .banner .container .banner_carousel .banner_item {
   width: auto;
   height: auto;
@@ -259,17 +244,28 @@ header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
   animation-fill-mode: both;
   animation-delay: 0.5s;
 }
-.banner .container .banner_carousel .banner_item .banner_title h1 {
+@media screen and (max-width: 921.5px) {
+  .banner .container .banner_carousel .banner_item .banner_title .small_title {
+    font-size: 2em;
+  }
+}
+.banner .container .banner_carousel .banner_item .banner_title .main_title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 7em;
   font-weight: 700;
   margin: 20px 0;
   filter: drop-shadow(20px 14px 0px rgba(6, 41, 67, 0.8862745098));
 }
-.banner .container .banner_carousel .banner_item .banner_title p {
+@media screen and (max-width: 921.5px) {
+  .banner .container .banner_carousel .banner_item .banner_title .main_title {
+    font-size: 5em;
+  }
+}
+.banner .container .banner_carousel .banner_item .banner_title .decrip_title {
   font-size: 15px;
   line-height: 2rem;
 }
+
 .banner .container .banner_carousel .banner_item .banner_title .btn-buy {
   background-color: rgb(6, 43, 145);
   padding: 10px 20px;
@@ -281,6 +277,11 @@ header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
   background-color: #5772f0;
   color: black;
   font-weight: bold;
+}
+@media screen and (max-width: 921.5px) {
+  .banner .container .banner_carousel .banner_item .banner_title .btn-buy {
+    font-size: 15px;
+  }
 }
 @keyframes scroll {
   0% {

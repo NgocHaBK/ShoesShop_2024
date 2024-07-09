@@ -209,7 +209,7 @@
             id="bg_move"
             class="banner_item d-flex justify-content-between align-content-center"
           >
-            <div class="banner_title">
+            <div class="banner_title w-50">
               <h2 class="small_title wow animate__animated animate__fadeInDown">
                 NEW ARRIVALS
               </h2>
@@ -217,7 +217,7 @@
                 MATE SHOES
               </h1>
               <p
-                class="wow animate__animated animate__fadeInUpBig animate__delay-1s"
+                class="decrip_title wow animate__animated animate__fadeInUpBig animate__delay-1s"
               >
                 This Mate Shoes remakes a classic with new colors and textures,
                 giving you a fresh look with a familiar feel. Premium materials
@@ -230,7 +230,7 @@
               </button>
             </div>
             <div
-              class="banner_image wow animate__animated animate__rotateInDownRight"
+              class="banner_image w-50 wow animate__animated animate__rotateInDownRight"
             >
               <div id="shoes">
                 <img src="./images/shoes_1.png" alt="" />
@@ -241,7 +241,7 @@
             id="bg_move1"
             class="banner_item d-flex justify-content-between align-content-center"
           >
-            <div class="banner_title">
+            <div class="banner_title w-50">
               <h2 class="small_title wow animate__animated animate__fadeInDown">
                 ORIGINAL SHOES
               </h2>
@@ -249,7 +249,7 @@
                 SNEAKERS
               </h1>
               <p
-                class="wow animate__animated animate__fadeInUpBig animate__delay-1s"
+                class="decrip_title wow animate__animated animate__fadeInUpBig animate__delay-1s"
               >
                 Sneakers are a type of footwear that is typically characterized
                 by a flexible sole and a canvas or leather upper. They are often
@@ -262,7 +262,7 @@
               </button>
             </div>
             <div
-              class="banner_image wow animate__animated animate__rotateInDownRight"
+              class="banner_image w-50 wow animate__animated animate__rotateInDownRight"
             >
               <div id="shoes1">
                 <img src="./images/shoes_2.png" alt="" />
@@ -273,15 +273,15 @@
             id="bg_move2"
             class="banner_item d-flex justify-content-between align-content-center"
           >
-            <div class="banner_title">
+            <div class="banner_title w-50">
               <h2 class="small_title wow animate__animated animate__fadeInDown">
                 RUNNING SHOES
               </h2>
               <h1 class="main_title wow animate__animated animate__fadeInUp">
-                HYPERFLEX
+                HYPERLEX
               </h1>
               <p
-                class="wow animate__animated animate__fadeInUpBig animate__fast"
+                class="decrip_title wow animate__animated animate__fadeInUpBig animate__fast"
               >
                 Running shoes are a type of athletic footwear designed
                 specifically for running. They typically have a cushioned sole
@@ -294,10 +294,10 @@
               </button>
             </div>
             <div
-              class="banner_image wow animate__animated animate__jackInTheBox"
+              class="banner_image w-50 wow animate__animated animate__jackInTheBox"
             >
               <div id="shoes2">
-                <img src="./images/banner_03.png" alt="" />
+                <img class="w-auto" src="./images/banner_03.png" alt="" />
               </div>
             </div>
           </article>
@@ -514,7 +514,7 @@
     <script src="./localStorage/localRequest.js"></script>
     <script src="./controller/favItem.js"></script>
     <script src="./controller/cartItem.js"></script>
-    <script src="index.js"></script>
+
     <a href="#" class="demo_top cd-top text-replace js-cd-top"
       ><i class="fa-solid fa-arrow-up"></i
     ></a>
@@ -570,6 +570,7 @@
           arrows: false,
           autoplay: true,
           autoplaySpeed: 5000,
+          pauseOnHover: true,
         });
       });
     </script>
@@ -589,6 +590,23 @@
           arrows: true,
           autoplay: true,
           autoplaySpeed: 4000,
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
         });
       });
     </script>
@@ -605,9 +623,7 @@
     <!-- backtotop -->
     <script src="./js/back-to-top-master/assets/js/util.js"></script>
     <script src="./js/back-to-top-master/assets/js/mainBTT.js"></script>
-    <script src="./user/user.js"></script>
-    <script src="./validate/validate.js"></script>
-    <script src="./controller/users.js"></script>
+
     <script src="./index.js"></script>
     <script src="./js/app.js"></script>
   </body>
