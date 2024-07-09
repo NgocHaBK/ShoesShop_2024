@@ -8,6 +8,9 @@ header {
   // margin-bottom: 100px;
   .container {
     .header_top {
+      @media screen and (max-width: 767.98px) {
+        display: none;
+      }
       display: flex;
       background-color: hsl(0, 0%, 25%);
       // background-color: transparent;
@@ -44,14 +47,20 @@ header {
       color: $white;
       padding: 8px 10px;
       img {
-        height: 40px;
+        height: 54px;
+        @media screen and (max-width: 767.98px) {
+          padding: 5px 0;
+        }
       }
 
-      ul {
+      .nav_container {
         font-size: 18px;
-
+        margin: auto 0;
         display: flex;
         //   gap: 20px;
+        @media screen and (max-width: 767.98px) {
+          display: none;
+        }
         li {
           position: relative;
           margin-left: 20px;
@@ -88,8 +97,13 @@ header {
         }
       }
       .shopping_part {
-        span {
-          margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+        font-size: 18px;
+        .fav_wrapper {
+          position: relative;
           &:hover {
             a {
               color: #f15e2c;
@@ -97,6 +111,73 @@ header {
           }
           a {
             color: white;
+            position: relative;
+            .cart_productQuantity {
+              position: absolute;
+              width: 12px;
+              height: 12px;
+              right: -5px;
+              top: 0;
+              border-radius: 50%;
+              background-color: red;
+              color: white;
+              font-size: 12px;
+              text-align: center;
+              line-height: 12px;
+            }
+          }
+          .listCartItem {
+            position: absolute;
+            display: none;
+            top: 28px;
+            right: 10%;
+            width: 350px;
+            height: 350px;
+            background-color: white;
+            border-radius: 8px;
+            transition: all 0.8s;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 2px;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 20px solid #212529;
+            transition: all 0.8s;
+          }
+          &:hover .listCartItem,
+          &:hover::after {
+            display: block; // Ensures the elements are displayed on hover
+          }
+        }
+        .menu__button {
+          @media screen and (min-width: 767.98px) {
+            display: none;
+          }
+        }
+      }
+      .offcanvas {
+        .offcanvas_nav_container {
+          color: #173d58;
+          font-size: 18px;
+          li {
+            padding: 10px 0;
+            a {
+              color: #173d58;
+            }
+          }
+        }
+        .offcanvas-button-box {
+          .btn-signup {
+            background-color: #f15e2c;
+          }
+          .btn-signin {
+            background-color: #173d58;
           }
         }
       }
@@ -615,6 +696,79 @@ footer {
           }
         }
       }
+    }
+  }
+}
+
+.form-register {
+  margin-top: 200px;
+  .form {
+    .text-form {
+      h1 {
+        color: #173d58;
+      }
+    }
+    .form-input {
+      form {
+        .input-detail {
+          .error-notify {
+            margin-left: 2px;
+            font-size: 14px;
+            color: red;
+          }
+        }
+      }
+      .btn-submit {
+        background-color: #173d58;
+      }
+    }
+  }
+}
+
+.products {
+  .header-products {
+    .search_input {
+      width: 200px;
+      padding: 10px 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+      &:focus {
+        border: 2px solid #173d58;
+      }
+    }
+  }
+  .detailed_products {
+    .item {
+      .shoes_name {
+        padding-bottom: 0;
+      }
+      .shoes_description {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+//Trang detail
+
+.detail-product {
+  .right {
+    ._button_group {
+      button {
+        &:hover {
+          background-color: #173d58;
+          color: white;
+        }
+      }
+    }
+    #btn-addfav {
+      background-color: #f15e2c;
+      &:hover {
+        opacity: 80%;
+      }
+    }
+    #btn-add {
+      background-color: #173d58;
     }
   }
 }

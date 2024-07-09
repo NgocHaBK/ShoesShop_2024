@@ -38,11 +38,21 @@ const validateTong = (user) => {
     } else {
       span_tag.innerHTML = "";
     }
-    if (name === "confpassword" && value !== user.password) {
+    if (
+      (name === "confpassword" && value !== user.password) ||
+      value.trim() === ""
+    ) {
       isvalid = 0;
       renderError(span_tag, name);
       continue;
     } else span_tag.innerHTML = "";
+    if (name === "gender" && value === "") {
+      isvalid = 0;
+      renderError(span_tag, name);
+      continue;
+    } else span_tag.innerHTML = "";
+
+    //continue
   }
   if (isvalid) {
     for (let inputUser of inputsUser) {

@@ -64,17 +64,16 @@
           </ul>
         </div>
         <div class="header_bot">
-          <a href="./index.html"
-            ><img src="./images/Logo_Ananas.png" alt=""
-          /></a>
+          <img src="./images/Logo_Ananas.png" alt="" />
 
-          <ul class="nav_container">
+          <ul>
             <li><a href="#">New & Featured</a></li>
             <li><a href="">Men</a></li>
             <li><a href="">Women</a></li>
             <li><a href="">Kids</a></li>
             <li><a href="">Sales</a></li>
           </ul>
+
           <div class="shopping_part">
             <span class="fav_wrapper">
               <a href=""
@@ -118,82 +117,31 @@
                 </table>
               </span>
             </span>
-            <a
-              data-bs-toggle="offcanvas"
-              href="#offcanvasRight"
-              role="button"
-              class="menu__button text-white"
-            >
-              <i class="fa-solid fa-bars"></i>
-            </a>
-          </div>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasRight"
-            aria-labelledby="offcanvasRightLabel"
-          >
-            <div class="offcanvas-header justify-content-end">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="offcanvas-nav ps-0 offcanvas_nav_container">
-                <li class="offcanvas-nav-item d-flex justify-content-between">
-                  <a href="" class="offcanvas-nav-link">New & Featured </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-                <li class="offcanvas-nav-item d-flex justify-content-between">
-                  <a href="" class="offcanvas-nav-link">Men </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-                <li class="offcanvas-nav-item d-flex justify-content-between">
-                  <a href="" class="offcanvas-nav-link">Women </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-                <li class="offcanvas-nav-item d-flex justify-content-between">
-                  <a href="" class="offcanvas-nav-link">Kids </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-                <li class="offcanvas-nav-item d-flex justify-content-between">
-                  <a href="" class="offcanvas-nav-link">Sales </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-              </ul>
-
-              <div
-                class="offcanvas-button-box d-flex w-75 justify-content-around mx-auto text-center"
-              >
-                <a
-                  href="./signUp.html"
-                  class="button button--outline button--outline-1 px-4 py-2 rounded-2 text-white me-2 btn-signup hover:bg-opacity-75"
-                  >Sign Up</a
-                >
-                <a
-                  href=""
-                  class="button button--black button--black-1 px-4 py-2 rounded-2 text-white btn-signin focus:bg-opacity-75"
-                  >Sign In</a
-                >
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="detail-product container"></section>
-    <section class="product_list pb-20">
+    <section class="products">
       <div class="container">
-        <div class="fs-3 fw-bold">You Might Also Like</div>
-        <div class="product_list-content row row-cols-lg-3 row-cols-sm-1"></div>
+        <div class="header-products flex justify-content-between">
+          <p class="font-bold fs-4">Men's shoes</p>
+          <input
+            type="text"
+            class="search_input"
+            id="search"
+            aria-describedby="helpId"
+            placeholder="VD: nike, adidas, converse... "
+          />
+        </div>
+        <div
+          class="detailed_products grid grid-cols-3 gap-3"
+          id="detailed_products"
+        ></div>
       </div>
     </section>
     <footer>
-      <div class="container row row-cols-sm-1 row-cols-md-1 row-cols-lg-3">
-        <div class="foot_content row-cols-lg-3 col">
+      <div class="container">
+        <div class="foot_content">
           <div class="foot_1">
             <ul>
               <li><a href="#">FIND A STORE</a></li>
@@ -222,8 +170,7 @@
             </ul>
           </div>
         </div>
-
-        <div class="foot_social text-sm-right col">
+        <div class="foot_social">
           <ul>
             <li>
               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -265,6 +212,7 @@
     <script src="./localStorage/localRequest.js"></script>
     <script src="./controller/favItem.js"></script>
     <script src="./controller/cartItem.js"></script>
+    <script src="./util/util.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
