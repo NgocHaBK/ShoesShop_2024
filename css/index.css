@@ -17,3 +17,32 @@
   padding-left: 12px;
   list-style: circle;
 }
+body .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.5;
+}
+.demo_top {
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #af2239;
+  /* padding: 15px; */
+  opacity: 0;
+  visibility: hidden;
+}
+.demo_top:hover {
+  color: #f15e2c;
+  background-color: #173d58;
+}
