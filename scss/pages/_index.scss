@@ -432,22 +432,18 @@ header {
         color: white;
         border-width: 2px;
         border: 2px solid #ea724a;
-        padding: 10px;
+
         transition: all 0.5s;
+        padding: 10px;
         overflow: hidden;
-        a {
-          border-radius: 20px;
-          .img_product {
-            // width: 100%;
-            padding: 10px;
-            border-radius: 20px;
-            transition: all 0.3s;
-            &:hover {
-              border-radius: 0;
-            }
-          }
+        .img_product {
+          width: 100%;
         }
         &:hover {
+          .img_product {
+            animation: xcaleI 0.3s;
+            animation-fill-mode: forwards;
+          }
           border-radius: 0;
           border-image: linear-gradient(#e7ec47, #3528e7) 30;
           box-shadow: 0px 0px 30px 1px rgba(17, 111, 204, 0.57);

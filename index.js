@@ -62,8 +62,8 @@ const renderProducts = (renderedProducts = productsArr) => {
       const { image, price, name, description } = item;
       const new_description = description.slice(0, 50);
       contents += `<div class="flex-column mt-4 item col">
-            <a href="./detail.html?productid=${item.id}"><img src="${image}" alt="hinh" style="background-color: #f5f5f5;object-fit:contain" class=" img_product"/></a>
-            <a href="./detail.html?productid=${item.id}" style="color:#f15e2c" class="mt-2 fs-5 d-inline-block"><p>${name}</p></a>
+            <a href="./detail.html?productid=${item.id}" class="py-3 px-3"><img src="${image}" alt="hinh"  class="py-3 px-3 img_product"/></a>
+            <a href="./detail.html?productid=${item.id}" style="color:#f15e2c" class=" fs-5 d-inline-block"><p>${name}</p></a>
             <p class="shoes_name pb-0 mb-2" style="color:white">Men's shoes</p>
             <p class="shoes_description">${new_description}</p>
             <p class="pt-0">$ ${price}</p>
