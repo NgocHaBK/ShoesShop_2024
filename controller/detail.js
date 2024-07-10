@@ -68,7 +68,7 @@ window.onload = () => {
       for (let item of relatedProducts) {
         console.log("item: ", item);
         const { name, image, shortDescription, price } = item;
-        related_content += `<div class="flex-column mt-4 mr-4 item">
+        related_content += `<div class="flex-column mt-4 item">
               <a href="./detail.html?productid=${
                 item.id
               }" ><img src="${image}" alt="hinh" style="background-color: #f5f5f5;" class="w-100"/></a>
