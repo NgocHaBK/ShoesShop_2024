@@ -408,9 +408,10 @@ header {
     }
     .detailed_products {
       text-align: center;
-      // @media screen and (max-width: 576px) {
-      //   flex-direction: column;
-      // }
+      margin: 0 auto;
+      @media screen and (max-width: 576px) {
+        width: 80%;
+      }
       // @media screen and (max-width: 767.98px) {
       //   flex-direction: row;
       //   flex-wrap: wrap;

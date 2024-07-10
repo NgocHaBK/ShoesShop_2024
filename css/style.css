@@ -345,6 +345,12 @@ header .container .header_bot .offcanvas .offcanvas-button-box .btn-signin {
 }
 .products .container .detailed_products {
   text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  .products .container .detailed_products {
+    width: 80%;
+  }
 }
 .products .container .detailed_products .item {
   width: -moz-fit-content;
