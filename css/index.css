@@ -17,6 +17,7 @@
   padding-left: 12px;
   list-style: circle;
 }
+/* Back to top */
 body .cd-top--is-visible {
   visibility: visible;
   opacity: 1;
@@ -45,4 +46,11 @@ body .cd-top--is-visible {
 .demo_top:hover {
   color: #f15e2c;
   background-color: #173d58;
+}
+
+@media screen and (max-width: 576px) {
+  .banner .container .banner_carousel .banner_item .banner_title .main_title {
+    font-size: 30px;
+    filter: none;
+  }
 }

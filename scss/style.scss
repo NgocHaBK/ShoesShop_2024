@@ -1,4 +1,8 @@
 @import "./helper/variable";
 @import "./helper/mixin";
 @import "./base/base";
+@import "./../js/back-to-top-master/assets/css/style.scss";
+@import "../../../../codyhouse-framework/main/assets/css/style.scss"; // ⚠️ make sure to import the CodyHouse framework
+@import url("https://fonts.googleapis.com/css?family=Bitter|Open+Sans:400,700"); // custom font
+
 @import "./pages/index";

@@ -5,3 +5,21 @@
     rgba(255, 255, 255, 0) 100%
   );
 }
+//Responsive breakpoint
+@mixin mobile {
+  @media (min-width: #{$mobile-width - 1px}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

@@ -66,7 +66,7 @@ const renderProducts = (renderedProducts = productsArr) => {
       contents += `<div class="flex-column mt-4 item">
             <a href="./detail.html?productid=${item.id}"><img src="${image}" alt="hinh"  class="w-100 img_product"/></a>
             <a href="./detail.html?productid=${item.id}"  style="color:#f15e2c"><p class="shoes_name">${name}</p></a>
-            <p class="shoes_type pb-0 mb-2" style="color:#173d58">Men's shoes</p>
+            <p class="shoes_type pb-0 mb-2" >Men's shoes</p>
             <p class="shoes_description">${new_description}</p>
             <p class="shoes_price pt-0" >$ ${price}</p>
           </div>`;

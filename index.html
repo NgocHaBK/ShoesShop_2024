@@ -67,12 +67,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <header>
-      <div class="container mx-auto">
+      <div class="container">
         <div class="header_top">
           <ul>
             <li><a href="#">Find a Store</a></li>
@@ -82,13 +82,11 @@
           </ul>
         </div>
         <div class="header_bot">
-          <a href="./index.html"
-            ><img src="./images/Logo_Ananas.png" alt=""
-          /></a>
+          <img src="./images/Logo_Ananas.png" alt="" />
 
           <ul class="nav_container">
             <li><a href="#">New & Featured</a></li>
-            <li><a href="">Men</a></li>
+            <li><a href="#product">Men</a></li>
             <li><a href="">Women</a></li>
             <li><a href="">Kids</a></li>
             <li><a href="">Sales</a></li>
@@ -209,7 +207,7 @@
             id="bg_move"
             class="banner_item d-flex justify-content-between align-content-center"
           >
-            <div class="banner_title w-50">
+            <div class="banner_title">
               <h2 class="small_title wow animate__animated animate__fadeInDown">
                 NEW ARRIVALS
               </h2>
@@ -230,7 +228,7 @@
               </button>
             </div>
             <div
-              class="banner_image w-50 wow animate__animated animate__rotateInDownRight"
+              class="banner_image wow animate__animated animate__rotateInDownRight"
             >
               <div id="shoes">
                 <img src="./images/shoes_1.png" alt="" />
@@ -313,7 +311,7 @@
         <div class="sale_carousel" id="sale_products"></div>
       </div>
     </section>
-    <section class="products">
+    <section class="products" id="product">
       <div class="container mx-auto">
         <div class="header-products flex justify-content-between">
           <p class="font-bold fs-4">Men's shoes</p>
@@ -410,8 +408,8 @@
           </div>
         </div>
 
-        <div class="service_content flex gap-3">
-          <div class="service_item flex-1">
+        <div class="service_content row">
+          <div class="service_item col-lg-3 px-lg-3 col-sm-12 grid-feature">
             <a href="#"> <i class="fa-solid fa-arrows-rotate text-"></i></a>
 
             <div class="item_content">
@@ -419,7 +417,7 @@
               <p>30 days return limit</p>
             </div>
           </div>
-          <div class="service_item flex-1">
+          <div class="service_item col-lg-3 px-lg-3 col-sm-12 grid-feature">
             <a href="#"><i class="fa-solid fa-hospital-user"></i> </a>
             <div class="item_content">
               <h4>Customer Services</h4>
@@ -429,7 +427,7 @@
               </p>
             </div>
           </div>
-          <div class="service_item flex-1">
+          <div class="service_item col-lg-3 px-lg-3 col-sm-12 grid-feature">
             <a href="#"><i class="fa-solid fa-truck"></i></a>
             <div class="item_content">
               <h4>FREE delivery</h4>
@@ -597,6 +595,7 @@
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
+                dots: false,
               },
             },
             {
